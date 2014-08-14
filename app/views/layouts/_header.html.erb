@@ -4,11 +4,27 @@
       <%= link_to "Email To Letters", root_path, id: "logo" %>
       <nav>
         <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
           <li><%= link_to "About", about_path %></li>
           <li><%= link_to "Pricing", pricing_path %></li>
           <li><%= link_to "Contact", contact_path %></li>
-
+          <% if user_signed_in? %>
+            <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Account <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                
+                <li><%= link_to "Settings", edit_user_registration_path %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to "Sign out", destroy_user_session_path, method: "delete" %>
+                </li>
+              </ul>
+            </li>
+          <% else %>
+            <li><%= link_to "Sign Up", new_user_registration_path, :class => 'signup-link' %></li>
+            <li><%= link_to "Log In", new_user_session_path, :class => 'login-link' %></li>
+          <% end %>
         </ul>
       </nav>
     </div>

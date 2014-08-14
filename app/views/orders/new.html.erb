@@ -1,0 +1,38 @@
+
+<%= form_for @order do |f| %>
+<h3>To:</h3>
+<br>
+<p>Name:</p>
+<%= f.text_field :to_fname %> <%= f.text_field :to_lname %>
+<p>Company:</p>
+<%= f.text_field :to_company %>
+<p>Address:</p>
+<%= f.text_area :to_street %>
+<p>Address 2:</p>
+<%= f.text_area :to_street2 %>
+<p>City:</p>
+<%= f.text_field :to_city %>
+<p>State:</p>
+<%= f.text_field :to_state %>
+<p>Zip:</p>
+<%= f.text_field :to_zip %>
+
+<h3>From:</h3>
+
+<br>
+<p>Name:</p>
+<%= f.text_field :from_fname %> <%= f.text_field :from_lname %>
+<p>Company:</p>
+<%= f.text_field :from_company %>
+<p>Address:</p>
+<%= f.text_area :from_street %>
+<p>Address 2:</p>
+<%= f.text_area :from_street2 %>
+<p>City:</p>
+<%= f.text_field :from_city %>
+<p>State:</p>
+<%= f.text_field :from_state %>
+<p>Zip:</p>
+<%= f.text_field :from_zip %>
+
+<% end %>

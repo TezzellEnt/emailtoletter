@@ -4,6 +4,7 @@ Emailtoletter::Application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
   
   resources :charges
+  resources :orders
 
   root to: 'pages#home'
   # The priority is based upon order of creation: first created -> highest priority.

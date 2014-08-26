@@ -9,5 +9,6 @@
 3. Stripe - for credit card processing.
 4. Devise - for user authentication and permissions.
 5. Twitter Bootstrap - for frontend framework.
+6. Prawn - for PDF conversion
 
 

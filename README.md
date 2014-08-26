@@ -10,9 +10,6 @@
 4. Devise - for user authentication and permissions.
 5. Twitter Bootstrap - for frontend framework.
 6. CKeditor - for on page editing.
-<<<<<<< HEAD
 7. Prawn - for PDF conversion.
-=======
->>>>>>> 8b7118b5f0ae700a3ca5e3e8d1af8ee8ca11474d
 
 

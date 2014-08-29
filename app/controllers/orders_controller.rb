@@ -4,4 +4,6 @@ class OrdersController < ApplicationController
 		@order = Order.new
 	end
 
+	def create
+	end
 end

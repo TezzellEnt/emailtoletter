@@ -1,9 +1,13 @@
-
+<div>
+<br />
 <%= form_for @order do |f| %>
+
+<%= f.text_area :content, :class => 'ckeditor' %>
+<br />
 <h3>To:</h3>
 <br>
 <p>Name:</p>
-<%= f.text_field :to_fname %> <%= f.text_field :to_lname %>
+<%= f.text_field :to_fname, :placeholder => "First Name" %> <%= f.text_field :to_lname, :placeholder => "Last Name" %>
 <p>Company:</p>
 <%= f.text_field :to_company %>
 <p>Address:</p>
@@ -13,15 +17,15 @@
 <p>City:</p>
 <%= f.text_field :to_city %>
 <p>State:</p>
-<%= f.text_field :to_state %>
+<%= f.select :to_state, options_for_select(us_states) %>
 <p>Zip:</p>
-<%= f.text_field :to_zip %>
+<%= f.text_field :to_zip, :size=>"10" %>
 
 <h3>From:</h3>
 
 <br>
 <p>Name:</p>
-<%= f.text_field :from_fname %> <%= f.text_field :from_lname %>
+<%= f.text_field :from_fname, :placeholder => "First Name" %> <%= f.text_field :from_lname, :placeholder => "Last Name" %>
 <p>Company:</p>
 <%= f.text_field :from_company %>
 <p>Address:</p>
@@ -31,8 +35,13 @@
 <p>City:</p>
 <%= f.text_field :from_city %>
 <p>State:</p>
-<%= f.text_field :from_state %>
+<%= f.select :from_state, options_for_select(us_states) %>
 <p>Zip:</p>
-<%= f.text_field :from_zip %>
+<%= f.text_field :from_zip, :size=>"10" %>
+
+<div align="center">
+<%= f.submit 'Send My Letter!', :class => 'btn btn-primary' %>
+</div>
 
 <% end %>
+</div>

@@ -1,14 +1,15 @@
 <% provide(:title, 'Pricing') %>
 <h1>Email To Letters Pricing</h1>
 <div align="center">
-<p>We believe that pricing should be fair and cost-effective.</p>
+<p><strong>Pricing should be fair and cost-effective.</strong></p>
+<p>With that in mind, this is the pricing below:</p>
 </div>
 <br />
 <div class="row">
 	<div class="col-md-4">
 	</div>
 	<div class="col-md-4">
-	    <div class="panel panel-info">
+	    <div class="panel panel-primary">
 	        <div class="panel-heading">
 	      	  <h3 class="text-center">Pricing</h3>
 	        </div>
@@ -21,7 +22,7 @@
 						<li class="list-group-item"><i class="icon-ok text-danger"></i> My sincere grattitude</li>
 					</ul>
 	  		<div class="panel-footer">
-				<a class="btn btn-lg btn-block btn-danger" href="">Get Started!</a>
+				<%= link_to 'Get Started!', root_url, class: "btn btn-lg btn-block btn-danger" %> 
 			</div>
 		</div>
 	</div>
